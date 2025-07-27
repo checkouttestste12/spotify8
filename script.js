@@ -23,6 +23,15 @@ function initializeApp() {
     setupPlanSelection();
     updateProgressBar();
     showStep(1);
+    hideLoadingScreen(); // Esconde a tela de carregamento após a inicialização
+}
+
+// Função para esconder a tela de carregamento
+function hideLoadingScreen() {
+    const loadingScreen = document.getElementById("loading-screen");
+    if (loadingScreen) {
+        loadingScreen.classList.add("hidden");
+    }
 }
 
 // Configurar event listeners
